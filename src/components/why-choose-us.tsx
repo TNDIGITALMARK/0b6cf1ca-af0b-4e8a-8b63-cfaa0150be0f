@@ -5,33 +5,33 @@ import { Globe, Shield, Headphones, Award, Users, Clock } from 'lucide-react';
 const features = [
   {
     icon: Globe,
-    title: 'Expert Planning',
-    description: 'Our travel specialists craft personalized itineraries based on your unique preferences and dreams.'
+    title: 'Adventure Planning',
+    description: 'Our sunny travel specialists create personalized adventures filled with joy, discovery, and unforgettable moments.'
   },
   {
     icon: Shield,
-    title: 'Exclusive Access',
-    description: 'Enjoy VIP treatment with access to private tours, exclusive venues, and luxury accommodations.'
+    title: 'Premium Experiences',
+    description: 'Access exclusive tropical destinations, vibrant cultural tours, and sun-soaked luxury accommodations.'
   },
   {
     icon: Headphones,
-    title: 'Seamless Travel',
-    description: '24/7 concierge support ensures your journey is smooth from departure to return home.'
+    title: 'Happy Travels',
+    description: 'Round-the-clock support ensures your sunny adventure stays bright from start to finish.'
   }
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 hero-gradient">
+    <section className="py-20 ocean-gradient">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            WHY CHOOSE US?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <span className="text-gradient">WHY CHOOSE SUNNY TRAVELS?</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Experience the difference of working with luxury travel experts who understand
-            that your journey should be as extraordinary as your destination
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Join thousands of happy travelers who've discovered that life's brightest moments
+            happen when you explore the world with sunshine in your heart
           </p>
         </div>
 
@@ -43,15 +43,15 @@ export function WhyChooseUs() {
               className="text-center group"
             >
               {/* Icon */}
-              <div className="mx-auto w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="h-10 w-10 text-primary" />
+              <div className="mx-auto w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/30 transition-all sunshine-glow backdrop-blur-sm border border-white/30">
+                <feature.icon className="h-10 w-10 text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-white/80 leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -61,32 +61,32 @@ export function WhyChooseUs() {
         {/* Stats Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="group">
-            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 sunshine-glow hover:bg-white/25 transition-all">
               <div className="flex items-center justify-center mb-4">
-                <Users className="h-12 w-12 text-primary" />
+                <Users className="h-12 w-12 text-travel-sunshine" />
               </div>
-              <div className="text-4xl font-bold text-foreground mb-2">5,000+</div>
-              <div className="text-muted-foreground">Happy Travelers</div>
+              <div className="text-4xl font-bold text-white mb-2">8,500+</div>
+              <div className="text-white/80">Happy Adventurers</div>
             </div>
           </div>
 
           <div className="group">
-            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 sunshine-glow hover:bg-white/25 transition-all">
               <div className="flex items-center justify-center mb-4">
-                <Award className="h-12 w-12 text-primary" />
+                <Award className="h-12 w-12 text-travel-coral" />
               </div>
-              <div className="text-4xl font-bold text-foreground mb-2">50+</div>
-              <div className="text-muted-foreground">Countries Explored</div>
+              <div className="text-4xl font-bold text-white mb-2">75+</div>
+              <div className="text-white/80">Tropical Destinations</div>
             </div>
           </div>
 
           <div className="group">
-            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 sunshine-glow hover:bg-white/25 transition-all">
               <div className="flex items-center justify-center mb-4">
-                <Clock className="h-12 w-12 text-primary" />
+                <Clock className="h-12 w-12 text-travel-turquoise" />
               </div>
-              <div className="text-4xl font-bold text-foreground mb-2">10+</div>
-              <div className="text-muted-foreground">Years Experience</div>
+              <div className="text-4xl font-bold text-white mb-2">15+</div>
+              <div className="text-white/80">Years Creating Joy</div>
             </div>
           </div>
         </div>

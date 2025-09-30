@@ -13,11 +13,11 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 group">
-          <div className="p-2 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-            <Plane className="h-6 w-6 text-primary" />
+          <div className="p-2 rounded-full sunny-gradient group-hover:scale-110 transition-all sunshine-glow">
+            <Plane className="h-6 w-6 text-white" />
           </div>
           <span className="text-2xl font-bold text-gradient">
-            Wanderlust Adventures
+            ☀️ Sunny Travels
           </span>
         </Link>
 
@@ -65,9 +65,9 @@ export function Header() {
         <div className="hidden md:flex">
           <Button
             asChild
-            className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+            className="sunny-gradient text-white hover:scale-105 font-bold transition-all duration-300 shadow-lg"
           >
-            <Link href="/consultation">Book Now</Link>
+            <Link href="/consultation">Book Adventure</Link>
           </Button>
         </div>
 
@@ -133,10 +133,10 @@ export function Header() {
             <div className="pt-4">
               <Button
                 asChild
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+                className="w-full sunny-gradient text-white hover:scale-105 font-bold transition-all duration-300 shadow-lg"
               >
                 <Link href="/consultation" onClick={() => setIsOpen(false)}>
-                  Book Now
+                  Book Adventure
                 </Link>
               </Button>
             </div>

@@ -96,7 +96,7 @@ export function HeroSection() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-travel-sunshine/20 via-travel-sky/30 to-travel-turquoise/40" />
         </div>
       ))}
 
@@ -106,9 +106,9 @@ export function HeroSection() {
           <div className="max-w-4xl mx-auto animate-fade-in-up">
             {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              EXPLORE THE WORLD,
+              YOUR ADVENTURE
               <br />
-              <span className="text-gradient">INDULGE IN LUXURY</span>
+              <span className="text-gradient">AWAITS IN PARADISE</span>
             </h1>
 
             {/* Destination Info */}
@@ -122,8 +122,8 @@ export function HeroSection() {
             </div>
 
             {/* Current Destination Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8 border border-white/20">
-              <span className="text-sm font-medium">
+            <div className="inline-flex items-center sunshine-glow bg-white/90 backdrop-blur-md rounded-full px-6 py-3 mb-8 border border-travel-sunshine/30">
+              <span className="text-sm font-bold text-travel-sunshine">
                 NOW VIEWING: {currentDestination.destination.toUpperCase()}, {currentDestination.country.toUpperCase()}
               </span>
             </div>
@@ -132,16 +132,16 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-3"
+                className="sunny-gradient hover:scale-105 text-white font-bold text-lg px-8 py-3 shadow-lg transition-all duration-300"
               >
-                Discover More
+                Book Unforgettable Trips
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-black font-semibold text-lg px-8 py-3"
+                className="border-white/80 bg-white/20 text-white hover:bg-white hover:text-travel-sunshine font-semibold text-lg px-8 py-3 backdrop-blur-sm"
               >
-                Plan Your Journey
+                Plan My Adventure
               </Button>
             </div>
           </div>
@@ -151,28 +151,28 @@ export function HeroSection() {
       {/* Navigation Controls */}
       <button
         onClick={prevImage}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group"
+        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-travel-sunshine/30 transition-all group sunshine-glow"
       >
         <ChevronLeft className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
       </button>
 
       <button
         onClick={nextImage}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group"
+        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-travel-sunshine/30 transition-all group sunshine-glow"
       >
         <ChevronRight className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => goToImage(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-4 h-4 rounded-full transition-all border-2 ${
               index === currentImage
-                ? 'bg-white scale-125'
-                : 'bg-white/50 hover:bg-white/75'
+                ? 'bg-travel-sunshine border-travel-sunshine scale-125 sunshine-glow'
+                : 'bg-white/50 border-white/70 hover:bg-white/75 hover:border-travel-sunshine/50'
             }`}
           />
         ))}

@@ -67,10 +67,10 @@ export function FeaturedDestinations() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            FEATURED DESTINATIONS
+            <span className="text-gradient">FEATURED DESTINATIONS</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Handpicked luxury experiences that transform your travel dreams into extraordinary memories
+            Discover sun-soaked adventures and vibrant cultures that create unforgettable memories
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export function FeaturedDestinations() {
           {featuredDestinations.map((destination) => (
             <div
               key={destination.id}
-              className="group bg-card rounded-2xl overflow-hidden shadow-lg card-hover border border-border"
+              className="group bg-card rounded-2xl overflow-hidden shadow-lg card-hover border border-border sunshine-glow"
             >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
@@ -100,7 +100,7 @@ export function FeaturedDestinations() {
                 </div>
 
                 {/* Price Badge */}
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground rounded-full px-3 py-1">
+                <div className="absolute top-4 left-4 sunny-gradient text-white rounded-full px-3 py-1 shadow-lg">
                   <span className="text-sm font-bold">
                     From {destination.price}
                   </span>
@@ -141,7 +141,11 @@ export function FeaturedDestinations() {
                     {destination.highlights.map((highlight, index) => (
                       <span
                         key={index}
-                        className="text-xs bg-accent/20 text-accent-foreground px-2 py-1 rounded-full"
+                        className={`text-xs px-2 py-1 rounded-full font-medium ${
+                          index % 3 === 0 ? 'bg-travel-coral/20 text-travel-coral border border-travel-coral/30' :
+                          index % 3 === 1 ? 'bg-travel-turquoise/20 text-travel-turquoise border border-travel-turquoise/30' :
+                          'bg-travel-mint/20 text-travel-mint border border-travel-mint/30'
+                        }`}
                       >
                         {highlight}
                       </span>
@@ -157,10 +161,10 @@ export function FeaturedDestinations() {
                 {/* CTA Button */}
                 <Button
                   asChild
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full sunny-gradient hover:scale-105 text-white font-semibold transition-all duration-300 shadow-md"
                 >
                   <Link href={`/destinations/${destination.id}`}>
-                    Explore Package
+                    Book This Adventure
                   </Link>
                 </Button>
               </div>
@@ -174,10 +178,10 @@ export function FeaturedDestinations() {
             asChild
             variant="outline"
             size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="border-travel-sunshine text-travel-sunshine hover:sunny-gradient hover:text-white font-semibold px-8 py-3 transition-all duration-300"
           >
             <Link href="/destinations">
-              View All Destinations
+              Explore All Adventures
             </Link>
           </Button>
         </div>

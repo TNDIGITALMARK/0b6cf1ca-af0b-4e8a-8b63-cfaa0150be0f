@@ -22,8 +22,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wanderlust Adventures - Luxury Travel Experiences",
-  description: "Discover the world through curated luxury travel experiences. Expert planning, exclusive access, and seamless journeys to extraordinary destinations.",
+  title: "Sunny Travels - Your Adventure Awaits in Paradise",
+  description: "Experience vibrant destinations and sun-soaked adventures with our bright, happy travel experiences. Discover tropical paradises, scenic getaways, and unforgettable moments.",
 };
 
 export default function RootLayout({
@@ -42,7 +42,7 @@ export default function RootLayout({
         <QueryProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             enableSystem={false}
             disableTransitionOnChange
           >
